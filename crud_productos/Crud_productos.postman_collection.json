@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "afa2537e-34a7-467b-8b6f-8b4a1a3d1273",
+		"name": "Crud_productos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14411223"
+	},
+	"item": [
+		{
+			"name": "Get productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5016/api/productosapi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5016",
+					"path": [
+						"api",
+						"productosapi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5016/api/productosapi/1003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5016",
+					"path": [
+						"api",
+						"productosapi",
+						"1003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Cerveza\",\r\n  \"descripcion\": \"Cerveza\",\r\n  \"precio\": 1200,\r\n  \"stock\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5016/api/productosapi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5016",
+					"path": [
+						"api",
+						"productosapi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1003,  // Este es el ID del producto\r\n  \"nombre\": \"Aguardiente\",\r\n  \"descripcion\": \"Aguardiente\",\r\n  \"precio\": 1000,\r\n  \"stock\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5016/api/productosapi/1003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5016",
+					"path": [
+						"api",
+						"productosapi",
+						"1003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5016/api/productosapi/1005",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5016",
+					"path": [
+						"api",
+						"productosapi",
+						"1005"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
