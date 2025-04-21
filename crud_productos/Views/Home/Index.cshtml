@@ -1,0 +1,48 @@
+﻿@model List<crud_productos.Models.Producto>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Crud de Productos</h1>
+    <p>Crud simple de productos creada por Juan Barragán</p>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5>Listado de productos</h5>
+    </div>
+    <div class="card-body">
+        <a class="btn btn-success btn-sm" asp-action="Producto_Detalle" asp-controller="Home" asp-route-idProducto="0">Crear Nuevo</a>
+        <hr/>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th>@item.Nombre</th>
+                        <td>@item.Descripcion</td>
+                        <td>@item.Precio</td>
+                        <td>@item.Stock</td>
+                        <td>
+                            <a class="btn btn-warning btn-sm" asp-action="Producto_Detalle" asp-controller="Home" asp-route-idProducto="@item.Id">Editar</a> -
+                            <a class="btn btn-danger btn-sm" asp-action="Eliminar" asp-controller="Home" asp-route-idProducto="@item.Id">Eliminar</a>
+                        </td>
+
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
